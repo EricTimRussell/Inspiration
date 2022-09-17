@@ -1,0 +1,36 @@
+/* BASIC STYLES HERE */
+body {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black;
+}
+
+.text-hilighter {
+  color: beige;
+  text-shadow: 1px 1px #1f1f1f, 0px 0px 5px #fcad89b7;
+  font-weight: bold;
+  letter-spacing: .1rem;
+}
+
+.time-center {
+  display: grid;
+  place-content: center;
+}
+
+.hide {
+  color: #f5f5dc00;
+}
+
+.hide:hover {
+  color: #73ff00;
+  transition: ease-in .5s;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.task-color {
+  background-color: #f0f8ff34;
+}
