@@ -23,7 +23,7 @@ body {
 }
 
 .hide:hover {
-  color: #73ff00;
+  text-shadow: 1px 1px #1f1f1f, 0px 0px 5px #fd9474b7;
   transition: ease-in .5s;
 }
 

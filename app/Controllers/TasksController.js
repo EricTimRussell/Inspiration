@@ -31,6 +31,8 @@ export class TasksController {
       let formData = getFormData(form)
       // console.log(formData);
       await tasksService.addToDo(formData)
+      // @ts-ignore
+      form.reset()
     } catch (error) {
       console.error(error, 'addToDo')
       Pop.error(error)

@@ -11,7 +11,7 @@ export class Image {
 
   get NextImageTemplate() {
     return /*html*/`
-  <div selectable class="pointer mdi mdi-chevron-right fs-2" onclick="app.imagesController.drawNewImage()"></div>
+  <div selectable class=" col-md-1 pointer mdi mdi-chevron-right fs-2" onclick="app.imagesController.drawNewImage()"></div>
   `
   }
 }
