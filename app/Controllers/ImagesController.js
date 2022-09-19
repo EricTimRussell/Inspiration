@@ -1,7 +1,7 @@
 import { appState } from "../AppState.js"
 import { imagesService } from "../Services/ImagesService.js"
 import { Pop } from "../Utils/Pop.js"
-import { setText } from "../Utils/Writer.js"
+import { setHTML, setText } from "../Utils/Writer.js"
 
 function _drawBakcgroundImage() {
   let bgImage = appState.images
@@ -9,8 +9,11 @@ function _drawBakcgroundImage() {
   document.querySelector('body').style.backgroundImage = `url(${bgImage.largeImgUrl})`
   // @ts-ignore
   setText('imgauthor', bgImage.author)
-
+  // @ts-ignore
+  setHTML('next', bgImage.NextImageTemplate)
 }
+
+
 
 
 
@@ -30,4 +33,12 @@ export class ImagesController {
     }
   }
 
+  async drawNewImage() {
+    try {
+      await imagesService.drawNewImage()
+    } catch (error) {
+      console.error('getimages', error)
+      Pop.error(error.message)
+    }
+  }
 }
