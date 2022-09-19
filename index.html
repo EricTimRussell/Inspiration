@@ -28,12 +28,14 @@
         <h3>Quote</h3>
         <h4>Quote Author</h4>
       </div> -->
-      <div class="row">
-        <div class="col-12" id="draw clock">
-          <!-- CLOCK -->
-        </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <!-- CLOCK -->
+        <h1 id="clock" class="text-hilighter text-center"></h1>
       </div>
     </div>
+
 
   </main>
 
@@ -48,7 +50,7 @@
             class="mdi mdi-delete-forever-outline text-danger fs-4 selectable " onclick=""></span>
         </div> -->
         </div>
-        <form onsubmit="app.tasksController.addToDo()" class="input-group mb-1 mt-5 card-body">
+        <form onsubmit="app.tasksController.addToDo()" class="input-group card-body text-hilighter">
           <span class="input-group-text">ToDo</span>
           <input type="text" class="form-control px-5" name="description" required>
           <button type="submit" class="btn btn-light">+</button>

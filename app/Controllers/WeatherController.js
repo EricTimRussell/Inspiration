@@ -3,11 +3,11 @@ import { weatherService } from "../Services/WeatherService.js"
 import { Pop } from "../Utils/Pop.js"
 import { setHTML } from "../Utils/Writer.js";
 
+
 function _drawWeather() {
   // @ts-ignore
   setHTML('weather', appState.weather.WeatherTemplate)
 }
-
 
 export class WeatherController {
   constructor() {
@@ -26,6 +26,8 @@ export class WeatherController {
       Pop.error('Weather')
     }
   }
-
+  toggleTemp() {
+    weatherService.toggleTemp()
+  }
 
 }

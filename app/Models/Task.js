@@ -13,10 +13,10 @@ export class Task {
 
   get ToDoTemplate() {
     return /*html*/`
-  <div class="text-light d-flex p-3">
-    <input type="checkbox" ${this.completed ? 'checked' : ''} onchange="app.tasksController.completeToDo('${this.id}')">
-    <h4 class="px-2">${this.description}</h4>
-      <button class="mdi mdi-delete-forever-outline text-danger fs-4 selectable btn" onclick="app.tasksController.deleteToDo('${this.id}')"></button>
+  <div class="text-hilighter d-flex px-1">
+    <input class ="mx-2" type="checkbox" ${this.completed ? 'checked' : ''} onchange="app.tasksController.completeToDo('${this.id}')">
+    <h4 class="npt-1">${this.description}</h4>
+    <button class="mdi mdi-delete text-danger fs-5 selectable btn" onclick="app.tasksController.deleteToDo('${this.id}')"></button>
   </div>
     
     `
@@ -29,8 +29,7 @@ export class Task {
 
   }
   get uncomplete() {
-    let todos = appState.todos.filter(t => t.id == this.id)
-    let uncompleted = todos.filter(t => t.completed == false)
+    let uncompleted = appState.todos.filter(t => t.completed === false)
     return uncompleted.length
   }
 

@@ -15,7 +15,6 @@ class AppState extends EventEmitter {
   weather = null
   /** @type {import('./Models/Task').Task[]} */
   todos = []
-
   user = prompt("Enter Name")
 }
 

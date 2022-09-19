@@ -3,6 +3,7 @@ import { QuoteTime } from "../Models/QuoteTime.js";
 import { SandboxServer } from "./AxiosService.js"
 
 class QuotesTimeService {
+
   async getQuotes() {
     const res = await SandboxServer.get('/quotes')
     // console.log('getSandboxQuotes', res.data);

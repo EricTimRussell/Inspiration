@@ -1,7 +1,7 @@
 import { appState } from "../AppState.js";
 import { quotesTimeService } from "../Services/QuotesTimeService.js"
 import { Pop } from "../Utils/Pop.js"
-import { setHTML } from "../Utils/Writer.js";
+import { setHTML, setText } from "../Utils/Writer.js";
 
 function _drawQuote() {
   // @ts-ignore
@@ -9,7 +9,8 @@ function _drawQuote() {
 }
 
 function _drawClock() {
-  // TODO  Finish Clock
+  const time = new Date();
+  setText('clock', time.toLocaleTimeString())
 }
 
 export class QuotesTimeController {
@@ -29,10 +30,6 @@ export class QuotesTimeController {
       Pop.error(error)
     }
   }
-
-
-
-
 
 
 }
